@@ -1,35 +1,8 @@
-# ✨ Hi, I'm Samira Jahangiri
+### ✨ About Me
 
-🎓 PhD Candidate | 📊 Data Scientist | 🧠 AI/ML Researcher
 
----
+My research journey began with statistical analysis of gene expression data, where I used tests like Fisher’s exact test or hypergeometric testing, to identify overrepresented biological functions. These experiences helped me develop a strong understanding of probability distributions, hypothesis testing, and linear algebra. This statistical grounding now enables me to approach optimization problems in machine learning with greater confidence, particularly in large-scale model development.
 
-## 🔍 About Me
+Over time, I’ve transitioned from bioinformatics to general data science and machine learning. I'm currently pursuing my PhD at the University of Central Florida focusing on efficient tokenization and word embedding methods for integration into large language models (LLMs). This work includes studying foundation models, transformer architectures, and reinforcement learning strategies to improve language representations. 
 
-I'm working at the intersection of **federated learning**, **LLMs**, and **embedding optimization**.
-Passionate about building interpretable, ethical AI systems.
-
-- 📚 Research: Text embeddings, causal AI, ASD video analysis
-- 🛠️ Tools: Python, Julia, TensorFlow, Hugging Face, Flux.jl
-- 🌐 Website: [samirajahangiri.github.io](https://samirajahangiri.github.io)
-
----
-
-## 🧪 Projects
-
-- 💬 **TextSpace.jl** – Word embeddings & LLM integration in Julia  
-  [🔗 GitHub Repo](https://github.com/mantzaris/TextSpace.jl)
-
-- 🧠 **FedVision-ASD** – Federated Learning on autism video datasets  
-  [🔗 Project Repo](https://github.com/YOUR-LINK-HERE)
-
----
-
-## 📫 Contact
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://linkedin.com/in/YOUR-LINK)  
-📧 Email: yourname@domain.com
-
----
-
-![Banner](https://your-image-url.com/banner.gif)
+During my Master’s at the University of South Florida, I interned at Shriners Hospitals for Children, where I contributed to the efficient migration and management of massive genomic sequencing data. This required managing high-throughput sequencing files with sensitive patient and family metadata, demanding advanced database management and parallel processing workflows. I utilized shell scripting and bash in Linux-based distributed systems, leveraging my knowledge of job scheduling and cluster resource management to ensure secure, scalable, and high-performance data handling.

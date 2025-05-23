@@ -19,8 +19,7 @@
       height: 200px;
       border-radius: 8px;
       object-fit: cover;
-      margin: 20px auto 0 auto; /* centers the image horizontally */
-      display: block;
+      margin-top: 20px; /* centers the image horizontally */
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -93,14 +92,17 @@
 </head>
 <body>
 
-  <div class="container">
-    <!-- Left Column -->
     <div class="left">
-      <h1>Samira Jahangiri</h1>
-      <a class="gh-link" href="https://github.com/SamiraJahangiri" target="_blank">View My GitHub Profile</a>
-      <img src="images/profile.jpg" alt="Samira Jahangiri" class="profile-pic">
+      <div class="left-inner">
+        <h1>Samira Jahangiri</h1>
+        <a class="gh-link" href="https://github.com/SamiraJahangiri" target="_blank">View My GitHub Profile</a>
+        <img src="images/profile.jpg" alt="Samira Jahangiri" class="profile-pic">
+      </div>
     </div>
-
+    .left-inner {
+    text-align: center;
+    }
+  
     <!-- Right Column -->
     <div class="right">
       <h2>✨ About Me</h2>

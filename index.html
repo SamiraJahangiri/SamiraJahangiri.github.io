@@ -24,18 +24,17 @@
       font-weight: normal;
       margin-bottom: 30px;
       text-align: left;
-      margin-left: 20px;
     }
-    
+
     .container {
       display: flex;
-      gap: 80px; /* Increased spacing between left and right columns */
+      gap: 80px;
       align-items: flex-start;
     }
 
     .left {
       flex: 1;
-      padding-left: 20px; /* Pushes Samira Jahangiri further left */
+      padding-left: 20px;
     }
 
     .right {
@@ -62,19 +61,11 @@
         width: 100%;
         padding-left: 0;
       }
-
-      h2 {
-        text-align: left;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- About Me Heading -->
-  <h2>✨ About Me</h2>
-
-  <!-- Two-column layout -->
   <div class="container">
 
     <!-- Left Column: Name -->
@@ -82,8 +73,10 @@
       <h1>Samira Jahangiri</h1>
     </div>
 
-    <!-- Right Column: About Text -->
+    <!-- Right Column: About Me -->
     <div class="right">
+      <h2>✨ About Me</h2>
+
       <p>My research journey began with statistical analysis of gene expression data, where I used tests like Fisher’s exact test and hypergeometric testing to identify overrepresented biological functions. These experiences helped me develop a strong understanding of probability distributions, hypothesis testing, and linear algebra. This statistical grounding now enables me to approach optimization problems in machine learning with greater confidence, particularly in large-scale model development.</p>
 
       <p>Over time, I’ve transitioned from bioinformatics to general data science and machine learning. I'm currently pursuing my PhD at the University of Central Florida, under the supervision of <a href="https://sciences.ucf.edu/statistics/person/alexander-mantzaris/">Dr. Alexandros Mantzaris</a>, focusing on efficient tokenization and word embedding methods for integration into large language models (LLMs). As part of this work, we are developing <a href="https://github.com/mantzaris/TextSpace.jl">TextSpace.jl</a>, a Julia-based framework for embedding and processing language representations in scalable AI systems. This includes studying foundation models, transformer architectures, and reinforcement learning to improve language modeling.</p>

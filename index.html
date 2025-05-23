@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: 40px auto;
+      margin: 80px auto; /* More top margin */
       max-width: 960px;
       padding: 0 20px;
       color: #333;
@@ -16,12 +16,20 @@
     h1 {
       font-size: 2.5em;
       font-weight: normal;
-      margin-top: 0;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      font-weight: normal;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
     .container {
       display: flex;
       gap: 40px;
+      align-items: flex-start;
     }
 
     .left {
@@ -45,25 +53,39 @@
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        align-items: center;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      h2 {
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- About Me Heading -->
+  <h2>✨ About Me</h2>
+
+  <!-- Two-column layout -->
   <div class="container">
+
     <!-- Left Column: Name -->
     <div class="left">
       <h1>Samira Jahangiri</h1>
     </div>
 
-    <!-- Right Column: About Me -->
+    <!-- Right Column: About Text -->
     <div class="right">
       <p>My research journey began with statistical analysis of gene expression data, where I used tests like Fisher’s exact test and hypergeometric testing to identify overrepresented biological functions. These experiences helped me develop a strong understanding of probability distributions, hypothesis testing, and linear algebra. This statistical grounding now enables me to approach optimization problems in machine learning with greater confidence, particularly in large-scale model development.</p>
 
-      <p>Over time, I’ve transitioned from bioinformatics to general data science and machine learning. I'm currently pursuing my PhD at the University of Central Florida, under the supervision of <a href="https://sciences.ucf.edu/statistics/person/alexander-mantzaris/">Dr. Alexandros Mantzaris</a>, focusing on efficient tokenization and word embedding methods for integration into large language models (LLMs). As part of this work, we are developing <a href="https://github.com/mantzaris/TextSpace.jl">TextSpace.jl</a>, a Julia-based framework for embedding and processing language representations in scalable AI systems. This includes studying foundation models, transformer architectures, and reinforcement learning strategies to improve language modeling.</p>
+      <p>Over time, I’ve transitioned from bioinformatics to general data science and machine learning. I'm currently pursuing my PhD at the <strong>University of Central Florida</strong>, under the supervision of <a href="https://sciences.ucf.edu/statistics/person/alexander-mantzaris/">Dr. Alexandros Mantzaris</a>, focusing on efficient tokenization and word embedding methods for integration into large language models (LLMs). As part of this work, we are developing <a href="https://github.com/mantzaris/TextSpace.jl">TextSpace.jl</a>, a Julia-based framework for embedding and processing language representations in scalable AI systems. This includes studying foundation models, transformer architectures, and reinforcement learning strategies to improve language modeling.</p>
 
-      <p>During my Master’s at the University of South Florida, I interned at <a href="https://www.shrinerschildrens.org/en/providers-and-research/research-at-shriners-childrens/genomics-institute-laboratory">Shriners Hospitals for Children</a>, where I contributed to the efficient migration and management of massive genomic sequencing data. This required handling high-throughput sequencing files with sensitive patient and family metadata, demanding advanced database management and parallel processing workflows. I utilized shell scripting and bash in Linux-based distributed systems, leveraging my knowledge of job scheduling and cluster resource management to ensure secure, scalable, and high-performance data handling.</p>
+      <p>During my Master’s at the <strong>University of South Florida</strong>, I interned at <a href="https://www.shrinerschildrens.org/en/providers-and-research/research-at-shriners-childrens/genomics-institute-laboratory">Shriners Hospitals for Children</a>, where I contributed to the efficient migration and management of massive genomic sequencing data. This required handling high-throughput sequencing files with sensitive patient and family metadata, demanding advanced database management and parallel processing workflows. I utilized shell scripting and bash in Linux-based distributed systems, leveraging my knowledge of job scheduling and cluster resource management to ensure secure, scalable, and high-performance data handling.</p>
     </div>
   </div>
 

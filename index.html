@@ -15,8 +15,8 @@
     }
 
     .profile-pic {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       border-radius: 8px;
       object-fit: cover;
       margin-top: 20px;
@@ -46,6 +46,9 @@
 
     .left-inner {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .right {
@@ -59,12 +62,6 @@
       font-weight: bold;
       color: #0366d6;
       margin: 0;
-    }
-
-    .gh-link {
-      font-size: 0.9em;
-      margin-top: 8px;
-      display: block;
     }
 
     h2 {
@@ -112,7 +109,6 @@
       margin-bottom: 0;
     }
 
-    /* Add these new styles for interactive projects */
     .projects-container {
       margin-top: 20px;
     }
@@ -174,7 +170,7 @@
       width: 24px;
       height: 24px;
       transition: all 0.2s ease;
-      color: #0366d6; /* Matching your link color */
+      filter: invert(24%) sepia(98%) saturate(2099%) hue-rotate(199deg) brightness(93%) contrast(91%);
     }
     
     .social-icon:hover {
@@ -182,7 +178,6 @@
       opacity: 0.8;
     }
     
-    /* Optional: Add tooltip effect */
     a[title]:hover:after {
       content: attr(title);
       position: absolute;
@@ -214,7 +209,7 @@
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
             </a>
             <a href="./CV_Samira.pdf" target="_blank" title="CV">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE0IDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMlY4eiIvPjxwb2x5bGluZSBwb2ludHM9IjE0IDIgMTQgOCAyMCA4Ii8+PC9zdmc+" alt="CV" class="social-icon">             
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/file-text.svg" alt="CV" class="social-icon">
             </a>
           </div>
           <img src="images/profile.jpg" alt="Samira Jahangiri" class="profile-pic">

@@ -173,11 +173,28 @@
     .social-icon {
       width: 24px;
       height: 24px;
-      transition: transform 0.2s;
+      transition: all 0.2s ease;
+      color: #0366d6; /* Matching your link color */
     }
     
     .social-icon:hover {
       transform: scale(1.1);
+      opacity: 0.8;
+    }
+    
+    /* Optional: Add tooltip effect */
+    a[title]:hover:after {
+      content: attr(title);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
     }
   </style>
 </head>

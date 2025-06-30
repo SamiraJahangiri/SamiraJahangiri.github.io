@@ -112,7 +112,7 @@
         margin-bottom: 0;
       }
 
-        /* Add these new styles for interactive projects */
+    /* Add these new styles for interactive projects */
     .projects-container {
       margin-top: 20px;
     }
@@ -125,16 +125,30 @@
       padding: 8px 12px;
       border-radius: 4px;
       transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
     }
     
     .project-title:hover {
       background-color: #f0f7ff;
     }
     
+    .project-title::before {
+      content: "▶";
+      font-size: 0.8em;
+      margin-right: 8px;
+      transition: transform 0.2s;
+    }
+    
+    .project-title.active::before {
+      content: "▼";
+    }
+    
+    
     .project-details {
       display: none;
       padding: 15px;
-      margin: 10px 0;
+      margin: 10px 0 20px 20px;
       background-color: #e6f2ff;
       border-radius: 6px;
       border-left: 4px solid #0366d6;
@@ -194,14 +208,30 @@
       </div>
     
       <script>
+        let currentlyOpen = null;
+        
         function toggleProject(projectId) {
           const project = document.getElementById(projectId);
-          // Close all first
-          document.querySelectorAll('.project-details').forEach(detail => {
-            detail.classList.remove('active-project');
-          });
-          // Toggle clicked one
-          project.classList.toggle('active-project');
+          const title = project.previousElementSibling;
+          
+          // If clicking the currently open project, close it
+          if (currentlyOpen === projectId) {
+            project.classList.remove('active-project');
+            title.classList.remove('active');
+            currentlyOpen = null;
+            return;
+          }
+          
+          // Close any open project first
+          if (currentlyOpen) {
+            document.getElementById(currentlyOpen).classList.remove('active-project');
+            document.querySelector(`[onclick="toggleProject('${currentlyOpen}')"]`).classList.remove('active');
+          }
+          
+          // Open the clicked project
+          project.classList.add('active-project');
+          title.classList.add('active');
+          currentlyOpen = projectId;
         }
       </script>
       

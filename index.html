@@ -111,6 +111,44 @@
       .project p {
         margin-bottom: 0;
       }
+
+        /* Add these new styles for interactive projects */
+    .projects-container {
+      margin-top: 20px;
+    }
+    
+    .project-title {
+      color: #0366d6;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 5px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    .project-title:hover {
+      background-color: #f0f7ff;
+    }
+    
+    .project-details {
+      display: none;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #e6f2ff;
+      border-radius: 6px;
+      border-left: 4px solid #0366d6;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .active-project {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -135,13 +173,37 @@
         <p> From 2018 to 2023, I worked across academic and clinical research settings, contributing to large-scale genomics and machine learning projects. At the <a href="https://github.com/usfomicshub">Omics Hub at the University of South Florida</a>, I built R Shiny dashboards for microbial profiling (16S, metagenomics) used by the Florida Department of Health, developed a power calculator for microbiome studies using PERMANOVA, and co-led RNA-seq and microbiome analysis workshops. I also developed deep learning models (CNNs, RNNs) to identify epigenetic markers of drug resistance in malaria parasites (Plasmodium falciparum), integrating population genomics and transcriptomics to uncover resistance pathways. In 2020, I supported pediatric precision medicine research at <a href="https://www.shrinerschildrens.org/en/news-and-media/videos/2021/05/genomics-at-shriners-childrens">Genomics at Shriners Children's</a> by automating ETL workflows and migrating petabyte-scale WGS datasets across AWS tiers (S3 to Glacier), cutting storage costs significantly. In 2022, I joined the <a href="https://www.hhmi.org/">Howard Hughes Medical Institute</a> (HHMI), where I led NGS data analysis (RNA-seq, WGS) for neurological disease studies and built machine learning pipelines with tree-based models to prioritize disease-associated variants. </p>
         <p> As part of my Ph.D. training at UCF since 2023, I’ve gained broad experience in advanced statistical modeling, including both frequentist and Bayesian inference. Our program emphasizes deep learning architectures such as transformers, graph neural networks, and diffusion models, alongside probabilistic methods like MCMC and variational inference. We also receive rigorous training in optimization techniques ranging from gradient and subgradient methods to linear, nonlinear, and integer programming, preparing us to tackle complex modeling tasks across domains. </p>
         <p> Outside research, I’ve always been drawn to the delicate details that others might overlook. I love reading about history, listening to classical music, and watching ballet, art forms I don’t practice myself but which remind me of life’s hidden intricacies. Beneath the surface of their seeming rigidity lies a quiet complexity, a rhythm of precision and expression. That same mindset of unfolding layers to find beauty and meaning shapes how I approach my work. <p> 
+  <!-- [Keep all content until Projects section] -->
         <h2>Projects</h2>
-        <p>Complex-valued word representations: Developing novel embedding spaces using complex numbers to capture semantic relationships.</p>
-        <p>Generative models for peptide design: Applying diffusion models to create therapeutic peptides.</p>
-        <p>HMDA mortgage analysis: Examining lending patterns using transformer architectures.</p>
+        <div class="projects-container">
+          <div class="project-title" onclick="toggleProject('project1')">Complex-valued word representations</div>
+          <div id="project1" class="project-details">
+            Developing novel embedding spaces using complex numbers to capture semantic relationships.
+          </div>
+          
+          <div class="project-title" onclick="toggleProject('project2')">Generative models for peptide design</div>
+          <div id="project2" class="project-details">
+            Applying diffusion models to create therapeutic peptides.
+          </div>
+          
+          <div class="project-title" onclick="toggleProject('project3')">HMDA mortgage analysis</div>
+          <div id="project3" class="project-details">
+            Examining lending patterns using transformer architectures.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
+    
+      <script>
+        function toggleProject(projectId) {
+          const project = document.getElementById(projectId);
+          // Close all first
+          document.querySelectorAll('.project-details').forEach(detail => {
+            detail.classList.remove('active-project');
+          });
+          // Toggle clicked one
+          project.classList.toggle('active-project');
+        }
+      </script>
+      
 </body>
 </html>
